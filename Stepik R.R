@@ -79,15 +79,15 @@ for (i in  3:143){
 }
 
 
-#1.4 4
+# 1.4 4
 
 moving_average <- c()
 data <- as.vector(AirPassengers)
 for (i in 1:135){moving_average <- c(moving_average, sum(data[i:(i+9)])/10)}
 
+# 1.5 1
 
-
-
+result <- mean(df$qsec[df$cyl != 3 & df$mpg > 20])
 
 
 

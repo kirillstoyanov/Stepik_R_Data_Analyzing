@@ -89,6 +89,28 @@ for (i in 1:135){moving_average <- c(moving_average, sum(data[i:(i+9)])/10)}
 
 result <- mean(df$qsec[df$cyl != 3 & df$mpg > 20])
 
+# 1.5 2
+
+descriptions_stat <- aggregate(cbind(hp,disp) ~ am,mtcars,sd)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

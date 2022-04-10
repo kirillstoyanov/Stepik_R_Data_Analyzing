@@ -94,6 +94,13 @@ result <- mean(df$qsec[df$cyl != 3 & df$mpg > 20])
 descriptions_stat <- aggregate(cbind(hp,disp) ~ am,mtcars,sd)
 
 
+# 1.5 3
+
+df <- subset(airquality, airquality$Month%in%c(7,8,9))
+result <- aggregate(df$Ozone ~ df$Month ,df,FUN = length)
+
+
+
 
 
 

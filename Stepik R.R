@@ -143,3 +143,8 @@ ggplot(airquality, aes(x = Month,y = Ozone, group = Month))+geom_boxplot()
 # STEP 5/8, 2 variant
 boxplot(Ozone ~ Month, data)
 
+# 1.6 
+# STEP 6/8
+
+plot1 <- ggplot(mtcars, aes(x = mpg, y = disp, col = hp))+
+  geom_point()

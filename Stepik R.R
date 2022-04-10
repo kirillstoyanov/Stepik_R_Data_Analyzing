@@ -129,12 +129,9 @@ x <-  describeBy(airquality, group = airquality$Month, mat = T, digits = 1, fast
 x <- subset(x = iris, iris$Species=="virginica")
 describe(x)
 
+# 1.5
+# STEP 15/15
 
+fixed_vector <- replace(my_vector, is.na(my_vector), mean(my_vector, na.rm = T))
 
-
-
-
-
-
-
-
+                        

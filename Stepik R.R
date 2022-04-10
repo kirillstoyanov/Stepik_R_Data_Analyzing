@@ -134,4 +134,12 @@ describe(x)
 
 fixed_vector <- replace(my_vector, is.na(my_vector), mean(my_vector, na.rm = T))
 
-                        
+# 1.6
+# STEP 5/8, 1 variant
+
+ggplot(airquality, aes(x = Month,y = Ozone, group = Month))+geom_boxplot()
+
+# 1.6
+# STEP 5/8, 2 variant
+boxplot(Ozone ~ Month, data)
+

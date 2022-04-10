@@ -123,16 +123,11 @@ result <- aggregate(df$Ozone ~ df$Month ,df,FUN = length)
 
 x <-  describeBy(airquality, group = airquality$Month, mat = T, digits = 1, fast = F)
 
+# 1.5
+#STEP  14/15
 
-
-
-
-
-
-
-
-
-
+x <- subset(x = iris, iris$Species=="virginica")
+describe(x)
 
 
 

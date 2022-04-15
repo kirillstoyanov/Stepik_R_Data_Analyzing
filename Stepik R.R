@@ -154,3 +154,8 @@ plot1 <- ggplot(mtcars, aes(x = mpg, y = disp, col = hp))+
 
 red_men <- prop.table(HairEyeColor[,,'Male'],2 )[3,2]
 
+# 2.1
+# STEP 6/16
+
+sum(HairEyeColor[,,'Female'][,4])
+

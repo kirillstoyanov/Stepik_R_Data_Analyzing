@@ -149,3 +149,8 @@ boxplot(Ozone ~ Month, data)
 plot1 <- ggplot(mtcars, aes(x = mpg, y = disp, col = hp))+
   geom_point()
 
+# 2.1
+# STEP 5/16
+
+red_men <- prop.table(HairEyeColor[,,'Male'],2 )[3,2]
+

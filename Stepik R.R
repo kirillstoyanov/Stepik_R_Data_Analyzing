@@ -159,3 +159,10 @@ red_men <- prop.table(HairEyeColor[,,'Male'],2 )[3,2]
 
 sum(HairEyeColor[,,'Female'][,4])
 
+# 2.1
+# STEP 8/16
+
+mydata <- as.data.frame(HairEyeColor)
+obj <- ggplot(data = subset(mydata, mydata$Sex=='Female'), aes(x = Hair, y = Freq,)) + 
+  geom_bar(aes(fill = Eye),stat="identity", position = position_dodge()) + 
+  scale_fill_manual(values=c("Brown", "Blue", "Darkgrey", "Darkgreen"))

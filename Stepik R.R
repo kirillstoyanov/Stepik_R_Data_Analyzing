@@ -180,3 +180,8 @@ factor_price <-  ifelse(diamonds$price >= mean(diamonds$price),1,0)
 factor_carat <-  ifelse(diamonds$carat >= mean(diamonds$carat),1,0)
 main_stat <-  chisq.test(factor_price,factor_carat)$statistic
 
+# 2.1
+# STEP 15/16
+
+fisher_test <- fisher.test(mtcars$am, mtcars$vs)$p.value
+

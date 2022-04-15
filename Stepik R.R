@@ -173,20 +173,10 @@ obj <- ggplot(data = subset(mydata, mydata$Sex=='Female'), aes(x = Hair, y = Fre
 main_stat <- chisq.test(diamonds$cut, diamonds$color)$statistic
 
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
+# 2.1
+# STEP 14/16
 
-
-
-
-
-
-
+factor_price <-  ifelse(diamonds$price >= mean(diamonds$price),1,0)
+factor_carat <-  ifelse(diamonds$carat >= mean(diamonds$carat),1,0)
+main_stat <-  chisq.test(factor_price,factor_carat)$statistic
 

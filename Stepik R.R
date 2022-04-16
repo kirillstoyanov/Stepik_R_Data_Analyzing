@@ -186,7 +186,7 @@ main_stat <-  chisq.test(factor_price,factor_carat)$statistic
 fisher_test <- fisher.test(mtcars$am, mtcars$vs)$p.value
 
 # 2.2
-# Step 10/16
+# STEP 10/16
 
 t_stat <-  t.test(x = subset(ToothGrowth, ToothGrowth$supp == 'OJ'& ToothGrowth$dose==0.5)['len'], 
                   y = subset(ToothGrowth, ToothGrowth$supp == 'VC'& ToothGrowth$dose==2)['len'])$statistic
@@ -197,3 +197,11 @@ t_stat <-  t.test(x = subset(ToothGrowth, ToothGrowth$supp == 'OJ'& ToothGrowth$
 ff <- read.csv('D:/RStudio/Projects/lekarstva.csv')
 t.test(ff$Pressure_before,ff$Pressure_after, paired = T)$statistic
 
+# 2.2
+# STEP 15/16
+
+data <- read.table("D:/RStudio/Projects/dataset_11504_15.txt")
+
+bartlett.test(data$V1 ~ data$V2, data)$p.value
+t.test(data$V1 ~ data$V2)$p.value
+wilcox.test(data$V1 ~ data$V2)$p.value

@@ -191,3 +191,9 @@ fisher_test <- fisher.test(mtcars$am, mtcars$vs)$p.value
 t_stat <-  t.test(x = subset(ToothGrowth, ToothGrowth$supp == 'OJ'& ToothGrowth$dose==0.5)['len'], 
                   y = subset(ToothGrowth, ToothGrowth$supp == 'VC'& ToothGrowth$dose==2)['len'])$statistic
 
+# 2.2
+# STEP 11/16
+
+ff <- read.csv('D:/RStudio/Projects/lekarstva.csv')
+t.test(ff$Pressure_before,ff$Pressure_after, paired = T)$statistic
+

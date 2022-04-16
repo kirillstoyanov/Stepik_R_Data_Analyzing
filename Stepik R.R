@@ -185,3 +185,9 @@ main_stat <-  chisq.test(factor_price,factor_carat)$statistic
 
 fisher_test <- fisher.test(mtcars$am, mtcars$vs)$p.value
 
+# 2.2
+# Step 10/16
+
+t_stat <-  t.test(x = subset(ToothGrowth, ToothGrowth$supp == 'OJ'& ToothGrowth$dose==0.5)['len'], 
+                  y = subset(ToothGrowth, ToothGrowth$supp == 'VC'& ToothGrowth$dose==2)['len'])$statistic
+

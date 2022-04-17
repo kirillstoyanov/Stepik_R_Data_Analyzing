@@ -205,3 +205,11 @@ data <- read.table("D:/RStudio/Projects/dataset_11504_15.txt")
 bartlett.test(data$V1 ~ data$V2, data)$p.value
 t.test(data$V1 ~ data$V2)$p.value
 wilcox.test(data$V1 ~ data$V2)$p.value
+
+
+# 2.3
+# STEP 8/15
+
+ans <- aov(yield ~ N*P, data = npk)
+summary(ans)[[1]][3,5]
+

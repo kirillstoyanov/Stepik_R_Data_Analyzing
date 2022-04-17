@@ -213,3 +213,8 @@ wilcox.test(data$V1 ~ data$V2)$p.value
 ans <- aov(yield ~ N*P, data = npk)
 summary(ans)[[1]][3,5]
 
+# 2.3
+# STEP 9/15
+
+ans2 <- aov(yield ~ N+P+K, data = npk)
+summary(ans2)[[1]][1:3,5]

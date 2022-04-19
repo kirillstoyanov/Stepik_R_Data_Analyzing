@@ -225,3 +225,8 @@ summary(ans2)[[1]][1:3,5]
 fill3 <-  aov(temperature ~ pill + Error(patient/pill), data = data2)
 summary(fill3)
 
+# 2.3
+# STEP 14/15
+
+fill4 <- aov(temperature ~ doctor*pill + Error(patient/doctor*pill), data = data2)
+summary(fill4)

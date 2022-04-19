@@ -218,3 +218,10 @@ summary(ans)[[1]][3,5]
 
 ans2 <- aov(yield ~ N+P+K, data = npk)
 summary(ans2)[[1]][1:3,5]
+
+# 2.3
+# STEP 13/15
+
+fill3 <-  aov(temperature ~ pill + Error(patient/pill), data = data2)
+summary(fill3)
+

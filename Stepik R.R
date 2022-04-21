@@ -251,3 +251,11 @@ NA.position <- function(x){
   }
   return(app)
 }
+
+# 2.4
+# STEP 8/11
+
+NA.counter <- function(x){
+  sum(is.na(x))
+}
+

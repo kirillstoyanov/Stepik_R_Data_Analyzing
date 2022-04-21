@@ -259,3 +259,10 @@ NA.counter <- function(x){
   sum(is.na(x))
 }
 
+# 2.4
+# STEP 10/11
+
+filtered.sum <- function(x){
+  sum(x[!is.na(x) & x > 0])
+}
+

@@ -239,3 +239,15 @@ obj <- ggplot(ToothGrowth, aes(x = as.factor(dose), y = len, col = supp, group =
   stat_summary(fun.data = mean_cl_boot, geom = 'point', size = 3, position = position_dodge(0.2))+
   stat_summary(fun.data = mean_cl_boot, geom = 'line', position = position_dodge(0.2))
 
+# 2.4
+# STEP 7/11
+
+NA.position <- function(x){
+  app <- c()
+  for( i in 1:length(x)){
+    if(is.na(x[i])){
+      app <- c(app, i)
+    }
+  }
+  return(app)
+}

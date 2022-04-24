@@ -266,3 +266,12 @@ filtered.sum <- function(x){
   sum(x[!is.na(x) & x > 0])
 }
 
+# 2.4
+# STEP 11/11
+
+outliers.rm <- function(x){
+  x1 <-  quantile(x, probs = c(0.25, 0.75))[1]
+  x2 <-  quantile(x, probs = c(0.25, 0.75))[2]
+  x <- x[!(x<as.vector(x1)-(IQR(x)*1.5) | x > as.vector(x2)+(IQR(x)*1.5))]
+}
+

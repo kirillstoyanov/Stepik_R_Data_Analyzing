@@ -275,3 +275,13 @@ outliers.rm <- function(x){
   x <- x[!(x<as.vector(x1)-(IQR(x)*1.5) | x > as.vector(x2)+(IQR(x)*1.5))]
 }
 
+# 3.1 
+# STEP 5/16
+
+corr.calc <- function(x){
+  answer <- c()
+  answer <- c(cor.test(~ x[,1]+x[,2])$p.value, answer)
+  answer <- c(cor.test(~ x[,1]+x[,2])$estimate, answer)
+  return(as.vector(answer))
+}
+

@@ -279,9 +279,7 @@ outliers.rm <- function(x){
 # STEP 5/16
 
 corr.calc <- function(x){
-  answer <- c()
-  answer <- c(cor.test(~ x[,1]+x[,2])$p.value, answer)
-  answer <- c(cor.test(~ x[,1]+x[,2])$estimate, answer)
-  return(as.vector(answer))
+  answer <- cor.test(x = x[,1], y = x[,2])
+  return(c(answer$estimate, answer$p.value))
 }
 

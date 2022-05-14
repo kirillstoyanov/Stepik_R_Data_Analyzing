@@ -293,3 +293,14 @@ filtered.cor <- function(x){
   ind <- which.max(abs(as.vector(corx)))
   return(corx[ind])
 }
+
+# 3.1
+# STEP 7/16
+
+smart_cor <- function(x){
+  if(shapiro.test(x[,1])$p.value <= 0.05 | shapiro.test(x[,2])$p.value <= 0.05){
+    return(cor.test(~ x[,1]+x[,2], x, method = 'spearman')$estimate)
+  } else{
+    return(cor.test(~ x[,1]+x[,2], x, method = 'pearson')$estimate)
+  }
+}

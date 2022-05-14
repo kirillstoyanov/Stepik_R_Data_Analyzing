@@ -283,3 +283,13 @@ corr.calc <- function(x){
   return(c(answer$estimate, answer$p.value))
 }
 
+# 3.1
+# STEP 6/16
+
+filtered.cor <- function(x){
+  x <- x[,unlist(lapply(x, is.numeric))]
+  corx <- cor(x)
+  diag(corx) <- 0
+  ind <- which.max(abs(as.vector(corx)))
+  return(corx[ind])
+}

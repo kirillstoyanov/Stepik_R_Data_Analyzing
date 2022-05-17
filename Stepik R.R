@@ -311,3 +311,11 @@ smart_cor <- function(x){
 dataframe1 <- read.table("dataset_11508_12.txt", sep=' ' ) 
 fit <- lm(formula = V1 ~ V2, dataframe1)
 fit$coefficients
+
+# 3.1 
+# STEP 13/16
+
+df <- subset(x = diamonds, diamonds$cut == 'Ideal' & diamonds$carat == 0.46)
+fit <- lm(price ~ depth, df)
+fit_coef <- fit$coefficients
+

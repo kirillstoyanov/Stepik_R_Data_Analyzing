@@ -319,3 +319,16 @@ df <- subset(x = diamonds, diamonds$cut == 'Ideal' & diamonds$carat == 0.46)
 fit <- lm(price ~ depth, df)
 fit_coef <- fit$coefficients
 
+# 3.1
+# STEP 14/16
+
+regr.calc <- function(x){
+  p <- cor.test(~ x[,1] + x[,2], x)
+  if(p$p.value < 0.05){
+    new_p <- lm(x[,1] ~ x[,2], x)
+    x$fit <- new_p$fitted.values
+    return(x)
+  } else {
+    return("There is no sense in prediction")
+  }
+}

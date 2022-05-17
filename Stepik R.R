@@ -304,3 +304,10 @@ smart_cor <- function(x){
     return(cor.test(~ x[,1]+x[,2], x, method = 'pearson')$estimate)
   }
 }
+
+# 3.1
+# STEP 12/16
+
+dataframe1 <- read.table("dataset_11508_12.txt", sep=' ' ) 
+fit <- lm(formula = V1 ~ V2, dataframe1)
+fit$coefficients

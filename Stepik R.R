@@ -332,3 +332,12 @@ regr.calc <- function(x){
     return("There is no sense in prediction")
   }
 }
+
+# 3.1
+# STEP 15/16
+
+library(ggplot2)
+my_plot <- ggplot(iris, aes(x = Sepal.Width, y = Petal.Width, col = factor(iris$Species)))+
+  geom_point(size = 5)+
+  geom_smooth(method = 'lm')
+

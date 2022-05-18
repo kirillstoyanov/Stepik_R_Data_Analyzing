@@ -352,3 +352,15 @@ fill_na <- function(x){
   x$y_full <- y_full
   return(x)
 }
+
+
+# 3.2
+# STEP 6/15
+
+#?#?#?#?#?
+
+# 3.2
+# STEP 7/15
+
+summary(lm(rating ~ complaints * critical, attitude))
+

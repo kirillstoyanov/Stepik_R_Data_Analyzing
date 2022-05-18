@@ -341,3 +341,14 @@ my_plot <- ggplot(iris, aes(x = Sepal.Width, y = Petal.Width, col = factor(iris$
   geom_point(size = 5)+
   geom_smooth(method = 'lm')
 
+# 3.2
+# STEP 5/15
+
+fill_na <- function(x){
+  fit <- lm(x[[3]] ~ x[[1]] + x[[2]], x)
+  y_full <- x$y
+  NAs <- which(is.na(y_full))
+  y_full[NAs] <- predict(fit,x)[NAs]
+  x$y_full <- y_full
+  return(x)
+}

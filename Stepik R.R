@@ -357,7 +357,7 @@ fill_na <- function(x){
 # 3.2
 # STEP 6/15
 
-#?#?#?#?#?
+model <- lm(wt ~ mpg+disp+hp, df)
 
 # 3.2
 # STEP 7/15
